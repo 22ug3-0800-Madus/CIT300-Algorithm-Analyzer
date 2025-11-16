@@ -13,7 +13,7 @@ public class BinarySearchTiming {
         for (int size : sizes) {
             int[] arr = generateArray(size);
             Arrays.sort(arr);
-            int target = arr[size - 1];
+            int target = arr[size - 1]; // search last element
 
             long start = System.nanoTime();
             binarySearch(arr, target);
@@ -29,9 +29,12 @@ public class BinarySearchTiming {
         while (left <= right) {
             int mid = (left + right) / 2;
 
-            if (arr[mid] == target) return mid;
-            else if (arr[mid] < target) left = mid + 1;
-            else right = mid - 1;
+            if (arr[mid] == target)
+                return mid;
+            else if (arr[mid] < target)
+                left = mid + 1;
+            else
+                right = mid - 1;
         }
         return -1;
     }
@@ -43,6 +46,6 @@ public class BinarySearchTiming {
         for (int i = 0; i < size; i++) {
             arr[i] = rand.nextInt(1000);
         }
-        return arr;
-    }
+        return arr; 
+    }
 }
