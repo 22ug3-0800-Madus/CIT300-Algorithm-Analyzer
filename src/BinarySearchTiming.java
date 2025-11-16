@@ -1,3 +1,4 @@
+import java.lang.reflect.Array;
 import java.util.Arrays;
 import java.util.Random;
 
@@ -43,6 +44,6 @@ public class BinarySearchTiming {
         for (int i = 0; i < size; i++) {
             arr[i] = rand.nextInt(1000);
         }
-        return arr;
-    }
+        return Arr;
+        }
 }
